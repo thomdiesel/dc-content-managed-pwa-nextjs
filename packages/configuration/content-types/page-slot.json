@@ -2,10 +2,29 @@
   "contentTypeUri": "https://anyafinn.dev/page-slot.json",
   "settings": {
     "label": "Page Slot",
-    "visualizations": [],
-    "icons": [{
-      "size": 256,
-      "url": "https://bigcontent.io/cms/icons/bond/bond-bannercopy.png"
-    }]
-  }
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/bond/bond-bannercopy.png"
+      }
+    ],
+    "visualizations": [
+      {
+        "label": "Localhost PWA",
+        "templatedUri": "http://localhost:3000/visualization?id={{content.sys.id}}",
+        "default": true
+      },
+      {
+        "label": "JSON",
+        "templatedUri": "https://{{vse.domain}}/content/id/{{content.sys.id}}?depth=all&format=inlined",
+        "default": false
+      }
+    ],
+    "cards": [
+      {
+        "templatedUri": "http://localhost:3000/visualization?id={{content.sys.id}}"
+      }
+    ]
+  },
+  "repositories": ["slots"]
 }

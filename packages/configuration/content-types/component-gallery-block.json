@@ -1,11 +1,32 @@
 {
-    "contentTypeUri": "https://anyafinn.dev/component-gallery-block.json",
-    "settings": {
-        "label": "Gallery Block",
-        "visualizations": [],
-        "icons": [{
-            "size": 256,
-            "url": "https://bigcontent.io/cms/icons/bond/bond-banner3col.png"
-        }]
-    }
+  "contentTypeUri": "https://anyafinn.dev/component-gallery-block.json",
+  "settings": {
+    "label": "Gallery Block",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://bigcontent.io/cms/icons/bond/bond-banner3col.png"
+      }
+    ],
+
+    "visualizations": [
+      {
+        "label": "Localhost PWA",
+        "templatedUri": "http://localhost:3000/visualization?id={{content.sys.id}}",
+        "default": true
+      },
+      {
+        "label": "JSON",
+        "templatedUri": "https://{{vse.domain}}/content/id/{{content.sys.id}}?depth=all&format=inlined",
+        "default": false
+      }
+    ],
+    "cards": [
+      {
+        "templatedUri": "http://localhost:3000/visualization?id={{content.sys.id}}"
+      }
+    ]
+  },
+
+  "repositories": ["content"]
 }

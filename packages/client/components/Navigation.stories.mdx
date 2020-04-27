@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import Navigation from './Navigation';
+import Navigation from "./Navigation";
 
 <Meta title="Navigation" />
 
@@ -11,27 +11,29 @@ Navigation is a component that renders a primary navigation menu at the top of t
 
 <Preview>
   <Story name="Navigation">
-      <Navigation links={[
-          {
-              title: 'Home',
-              href: '/'
-          },
-          {
-              title: 'Men',
-              href: '/men'
-          },
-          {
-              title: 'Women',
-              href: '/women'
-          },
-          {
-              title: 'Lookbook',
-              href: '/lookbook'
-          },
-          {
-              title: 'Blog',
-              href: '/blog'
-          }
-      ]} />
+    <Navigation
+      links={[
+        {
+          label: "Home",
+          href: "/",
+        },
+        {
+          label: "Men",
+          href: "/men",
+        },
+        {
+          label: "Women",
+          href: "/women",
+        },
+        {
+          label: "Lookbook",
+          href: "/lookbook",
+        },
+        {
+          label: "Blog",
+          href: "/blog",
+        },
+      ]}
+    />
   </Story>
 </Preview>
