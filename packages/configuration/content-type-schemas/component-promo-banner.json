@@ -1,0 +1,5 @@
+{
+  "body": "../schemas/component-promobanner.json",
+  "schemaId": "https://anyafinn.dev/component-promobanner.json",
+  "validationLevel": "CONTENT_TYPE"
+}
